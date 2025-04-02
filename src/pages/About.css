@@ -1,0 +1,62 @@
+/* About.css */
+
+.about-container {
+    max-width: 800px;
+    margin: 80px auto; /* Adjust top margin if you have a fixed navbar */
+    padding: 2rem;
+    background-color: #fff; /* White background for the content */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-container h1 {
+    text-align: center;
+    color: #007acc;
+    margin-bottom: 1rem;
+  }
+  
+  .bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #007acc;
+  }
+  
+  .skills, .journey {
+    margin-bottom: 2rem;
+  }
+  
+  .skills h2, .journey h2 {
+    color: #007acc;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skills ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .skills li {
+    background-color: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+  .journey p {
+    line-height: 1.6;
+  }
+  
