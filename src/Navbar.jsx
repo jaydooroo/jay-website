@@ -14,7 +14,10 @@ const Navbar = () => {
       <AppBar
         position="fixed"
         elevation={0}
-        sx={{ backgroundColor: "#f8f4f2", boxShadow: "none" }}
+        sx={{
+          backgroundColor: "#f8f4f2",
+          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+        }}
       >
         <Container maxWidth="lg" sx={{ paddingY: "2rem" }}>
           <Toolbar disableGutters>

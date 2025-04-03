@@ -7,17 +7,14 @@ import Navbar from "./Navbar";
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <Navbar />
-      <main style={{ paddingTop: "64px" }}>
-        <Routes>
-          <div className="main-container">
-            <Route path="/" element={<About />} />
-          </div>
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
+
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }
