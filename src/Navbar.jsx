@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { Container } from "@mui/material";
+import logo from "./assets/logo.png"; // Adjust the path as necessary
 
 const Navbar = () => {
   return (
@@ -21,6 +22,11 @@ const Navbar = () => {
       >
         <Container maxWidth="lg" sx={{ paddingY: "2rem" }}>
           <Toolbar disableGutters>
+            <img
+              src={logo}
+              alt="Logo"
+              style={{ height: "50px", marginRight: "1rem" }}
+            />
             <Typography
               variant="h6"
               component={Link}

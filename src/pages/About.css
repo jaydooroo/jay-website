@@ -1,23 +1,70 @@
 /* Dark top section */
 .dark-section {
-
-    background-color: #34312f; /* or your chosen dark color */
-    color: #fff;              /* ensure text is readable */
-    padding: 8rem 0;         /* spacing top/bottom */
+    background-color: #34312f;
+    color: #fff;
+    padding: 6rem 0; /* slightly reduced to balance spacing */
     width: 100%;
   }
   
   /* Lighter bottom section */
   .light-section {
-    background-color: #c5f0a4; /* example light greenish color */
+    background-color: #c5f0a4;
     color: #333;
-    padding: 4rem 0;    
+    padding: 4rem 0;
   }
   
   /* Container for content */
   .content-container {
+    
     max-width: 900px;
-    margin: 0 auto;    /* center horizontally */
-    padding: 0 2rem;   /* horizontal padding */
+    margin: 0 auto;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    
+  }
+  
+  /* Make layout stack on smaller screens */
+  @media (max-width: 768px) {
+    .content-container  {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .image-container {
+      margin: 1rem 0; /* reduce vertical margin on mobile */
+    }
+  }
+  
+  /* Text styling inside about section */
+  .about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+  
+  /* Image container styling */
+  .image-container {
+    max-width: 150px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* hover effect transition */
+    align-self: flex-end;
+    position: relative;
+    bottom: -100px;
+  }
+  
+  /* Hover effect on image */
+  .image-container:hover {
+    transform: scale(1.05);
   }
   
