@@ -1,0 +1,176 @@
+.contact-container {
+  padding: 4rem 0;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.page-title {
+  font-size: 3rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 3rem !important;
+  background: linear-gradient(45deg, #2196f3, #64b5f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* Contact Information Section */
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-card, .form-card, .availability-card {
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.2s ease;
+}
+
+.contact-card:hover, .form-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-title {
+  color: #1976d2;
+  font-weight: 600 !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Contact Items */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.contact-item:hover {
+  background-color: rgba(33, 150, 243, 0.05);
+}
+
+.contact-icon {
+  color: #2196f3 !important;
+  margin-right: 1rem !important;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+/* Availability Section */
+.availability-card {
+  background-color: #f8f9fa !important;
+}
+
+.availability-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.availability-list li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.availability-list li::before {
+  content: "•";
+  color: #2196f3;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.submit-button {
+  margin-top: 2rem !important;
+  padding: 1rem 2rem !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  background: linear-gradient(45deg, #2196f3, #64b5f6) !important;
+  transition: transform 0.2s ease !important;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .contact-card,
+  .form-card {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+  }
+
+  .availability-card {
+    background-color: #2c2c2c !important;
+    color: #ffffff !important;
+  }
+
+  .contact-item:hover {
+    background-color: rgba(33, 150, 243, 0.1);
+  }
+
+  .MuiInputBase-input {
+    color: #ffffff !important;
+  }
+
+  .MuiInputLabel-root {
+    color: #90caf9 !important;
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(144, 202, 249, 0.5) !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 2rem 1rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .contact-info-section {
+    gap: 1rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-icon {
+    margin-right: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+} 

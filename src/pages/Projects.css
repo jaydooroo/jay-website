@@ -1,0 +1,112 @@
+.projects-container {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: white;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #2196f3, #64b5f6);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.tech-chip {
+  transition: all 0.2s ease;
+}
+
+.tech-chip:hover {
+  transform: translateY(-2px);
+}
+
+.project-highlight {
+  position: relative;
+  padding-left: 20px;
+}
+
+.project-highlight::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #2196f3;
+}
+
+.project-actions {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.project-card:hover .project-actions {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading animation for cards */
+.card-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .projects-container {
+    padding: 16px;
+  }
+  
+  .project-card {
+    margin-bottom: 16px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .project-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
+  .tech-chip {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+  }
+  
+  .tech-chip:hover {
+    background-color: #444444 !important;
+  }
+} 
