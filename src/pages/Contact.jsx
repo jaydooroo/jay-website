@@ -13,7 +13,6 @@ import {
 } from "@mui/material";
 import {
   Email as EmailIcon,
-  Phone as PhoneIcon,
   LinkedIn as LinkedInIcon,
   Send as SendIcon,
   LocationOn as LocationIcon,
@@ -87,16 +86,6 @@ const Contact = () => {
                     <Typography variant="body1">
                       jehyeonlee27@gmail.com
                     </Typography>
-                  </div>
-                </div>
-
-                <div className="contact-item">
-                  <IconButton className="contact-icon" href="tel:385-977-9965">
-                    <PhoneIcon />
-                  </IconButton>
-                  <div className="contact-text">
-                    <Typography variant="subtitle1">Phone</Typography>
-                    <Typography variant="body1">334-224-4235</Typography>
                   </div>
                 </div>
 

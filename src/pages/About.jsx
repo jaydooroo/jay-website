@@ -71,9 +71,6 @@ const About = () => {
                 >
                   <EmailIcon /> <span>jehyeonlee27@gmail.com</span>
                 </IconButton>
-                <IconButton href="tel:385-977-9965" className="contact-button">
-                  <PhoneIcon /> <span>334-224-4235</span>
-                </IconButton>
                 <IconButton
                   href="https://linkedin.com/in/jehyeonlee"
                   target="_blank"
