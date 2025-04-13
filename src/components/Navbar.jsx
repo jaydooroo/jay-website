@@ -8,7 +8,7 @@ import {
   Container,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
@@ -22,22 +22,38 @@ const Navbar = () => {
     >
       <Container maxWidth="lg">
         <Toolbar sx={{ py: 1 }}>
-          <Typography
-            variant="h6"
+          <Box
             component={Link}
             to="/"
             sx={{
               flexGrow: 1,
               textDecoration: "none",
-              color: "var(--text-primary)",
-              fontWeight: "bold",
-              "&:hover": {
-                color: "var(--accent-primary)",
-              },
+              display: "flex",
+              alignItems: "center",
+              gap: 1,
             }}
           >
-            Jehyeon Lee
-          </Typography>
+            <img
+              src={logo}
+              alt="Logo"
+              style={{
+                height: "40px",
+                width: "auto",
+              }}
+            />
+            <Typography
+              variant="h6"
+              sx={{
+                color: "var(--text-primary)",
+                fontWeight: "bold",
+                "&:hover": {
+                  color: "var(--accent-primary)",
+                },
+              }}
+            >
+              Jehyeon Lee
+            </Typography>
+          </Box>
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
             <Button
               component={Link}
@@ -78,7 +94,6 @@ const Navbar = () => {
             >
               Contact
             </Button>
-            <ThemeToggle />
           </Box>
         </Toolbar>
       </Container>

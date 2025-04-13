@@ -21,6 +21,21 @@ import LinkIcon from "@mui/icons-material/Link";
 
 const projects = [
   {
+    title: "PHP Engineer at BYU",
+    description:
+      "Developed and maintained 4+ web applications using PHP and Laravel including A comprehensive web application for tracking student participation and managing university sport competition, featuring role-based access control and SAML authentication.",
+    technologies: ["PHP", "Laravel", "MySQL", "JavaScript", "SAML"],
+    type: "Professional",
+    company: "BYU Technology Department",
+    highlights: [
+      ,
+      "Enhanced security by migrating from CAS to SAML authentication",
+      "Implemented role-based access controls for different user types",
+      "Optimized database performance using MySQL and PHPMyAdmin",
+    ],
+    liveDemoLink: "https://isports.byu.edu/",
+  },
+  {
     title: "AI-Driven Stock Trading System",
     description:
       "An advanced trading system leveraging Deep Q-Networks (DQN) and Multi-Layer Perceptron (MLP) models for real-time stock trading decisions.",
@@ -32,6 +47,7 @@ const projects = [
       "Built data pipeline for continuous financial data retrieval",
       "Implemented real-time AI training and backtesting",
     ],
+    githubLink: "https://github.com/jaydooroo/public_dqn_training.git",
   },
   {
     title: "Video Subtitling Platform",
@@ -41,9 +57,9 @@ const projects = [
     type: "Professional",
     company: "ROBOFLOW LLC",
     highlights: [
-      "Implemented AWS Cognito authentication",
-      "Built Stripe-based billing system",
-      "Integrated with AWS Lambda and RDS",
+      "Implemented AWS Cognito authentication for web and Chrome extension",
+      "Built Stripe-based billing system with AWS Lambda integration",
+      "Developed real-time database interactions using RDS",
     ],
   },
   {
@@ -55,22 +71,25 @@ const projects = [
     company: "BYU Political Science Research",
     highlights: [
       "Engineered data pipeline for vast election datasets",
-      "Developed MVC-pattern Tkinter application",
-      "Implemented complex SQL queries for analysis",
+      "Developed MVC-pattern Tkinter application for data visualization",
+      "Implemented complex SQL queries for comprehensive analysis",
     ],
+    githubLink: "https://github.com/jaydooroo/vote_mandate_project.git",
   },
   {
     title: "Political Interaction Game",
     description:
-      "Research-purpose game simulating human-political interaction with collaborative AI.",
+      "Research-purpose game simulating human-political interaction with collaborative AI, featuring an administrative dashboard.",
     technologies: ["Flutter", "Dart", "Firebase", "AI"],
     type: "Research",
     company: "BYU AI Lab",
     highlights: [
-      "Built administrative dashboard for game management",
-      "Implemented automatic version control",
-      "Created real-time database interactions",
+      "Built administrative dashboard for game management and analytics",
+      "Implemented automatic version control and updates",
+      "Created real-time database interactions with Firebase",
+      "Added 10+ user functionalities including name duplication checks",
     ],
+    liveDemoLink: "https://juniorhighgame.com/",
   },
 ];
 
@@ -158,16 +177,28 @@ const Projects = () => {
                   sx={{ justifyContent: "flex-end", p: 2 }}
                   className="project-actions"
                 >
-                  <Button
-                    size="small"
-                    startIcon={<GitHubIcon />}
-                    sx={{ mr: 1 }}
-                  >
-                    View Code
-                  </Button>
-                  <Button size="small" startIcon={<LinkIcon />} color="primary">
-                    Live Demo
-                  </Button>
+                  {project.githubLink && (
+                    <Button
+                      size="small"
+                      startIcon={<GitHubIcon />}
+                      href={project.githubLink}
+                      target="_blank"
+                      sx={{ mr: 1 }}
+                    >
+                      View Code
+                    </Button>
+                  )}
+                  {project.liveDemoLink && (
+                    <Button
+                      size="small"
+                      startIcon={<LinkIcon />}
+                      href={project.liveDemoLink}
+                      target="_blank"
+                      color="primary"
+                    >
+                      Website
+                    </Button>
+                  )}
                 </CardActions>
               </Card>
             </Grid>
@@ -182,7 +213,7 @@ const Projects = () => {
             variant="contained"
             color="primary"
             startIcon={<GitHubIcon />}
-            href="https://github.com/jehyeonlee"
+            href="https://github.com/jaydooroo"
             target="_blank"
             sx={{ mt: 2 }}
           >

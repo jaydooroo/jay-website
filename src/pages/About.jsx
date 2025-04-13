@@ -49,14 +49,19 @@ const About = () => {
   return (
     <Container className="about-container">
       <section className="hero-section">
-        <Grid container spacing={4} alignItems="center">
+        <Grid
+          container
+          spacing={4}
+          alignItems="center"
+          justifyContent={"center"}
+        >
           <Grid item xs={12} md={7}>
             <div className="text-content">
               <Typography variant="h2" component="h1" className="name-title">
                 Jehyeon Lee
               </Typography>
               <Typography variant="h4" className="role-title">
-                Software Programmer
+                Full-Stack Developer & AI Enthusiast
               </Typography>
 
               <div className="contact-info">
@@ -80,12 +85,24 @@ const About = () => {
 
               <div className="current-status">
                 <Typography variant="h6">
-                  Currently: PHP Engineer & Full-Stack Developer at BYU
-                  Technology Department
+                  Currently: MES Engineer | Aspiring Software Engineer
                 </Typography>
                 <Typography variant="body1">
-                  Latest work: Event management system for student participation
-                  tracking
+                  A recent Computer Science graduate from Brigham Young
+                  University with a focus on Data Science and Economics minor.
+                  I'm passionate about technology's evolution and dedicated to
+                  contributing to its growth through innovative solutions.
+                </Typography>
+                <Typography variant="body1" sx={{ mt: 2 }}>
+                  My experience spans full-stack development, AI/ML systems, and
+                  cloud technologies. I particularly enjoy working with data,
+                  from collection to uncovering valuable insights, which
+                  complements my software development skills.
+                </Typography>
+                <Typography variant="body1" sx={{ mt: 2 }}>
+                  Actively seeking software engineering roles to apply my
+                  technical expertise, with future plans to pursue a Master's
+                  degree in AI and Data Science or Software Development.
                 </Typography>
               </div>
 
@@ -123,7 +140,7 @@ const About = () => {
             Computer Science - Data Science Emphasis
           </Typography>
           <Typography variant="body1">
-            Graduating: December 2024 • GPA: 3.72
+            Graduated: December 2024 • GPA: 3.72
           </Typography>
         </div>
       </section>
@@ -161,9 +178,30 @@ const About = () => {
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
             <div className="highlight-card">
+              <Typography variant="h6">Technical Expertise</Typography>
+              <Typography variant="body1">
+                <ul style={{ margin: "0.5rem 0", paddingLeft: "1.5rem" }}>
+                  <li>
+                    Full-stack development with modern frameworks (React,
+                    Node.js, PHP, Laravel)
+                  </li>
+                  <li>
+                    Cloud computing and AWS services (DynamoDB, Lambda, SQS,
+                    Cognito, Amplify)
+                  </li>
+                  <li>AI/ML implementation and data engineering</li>
+                  <li>Cross-platform mobile development (Flutter, Android)</li>
+                  <li>Database design and optimization (MySQL, SQLite, RDS)</li>
+                </ul>
+              </Typography>
+            </div>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <div className="highlight-card">
               <Typography variant="h6">Bilingual Proficiency</Typography>
               <Typography variant="body1">
-                Fluent in Korean and English
+                Fluent in Korean and English, enabling effective communication
+                in diverse environments
               </Typography>
             </div>
           </Grid>
@@ -171,7 +209,17 @@ const About = () => {
             <div className="highlight-card">
               <Typography variant="h6">Teaching Experience</Typography>
               <Typography variant="body1">
-                Teaching Assistant for Advanced Algorithms and Computer Systems
+                Teaching Assistant for Advanced Algorithms and Computer Systems,
+                mentoring 100+ students
+              </Typography>
+            </div>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <div className="highlight-card">
+              <Typography variant="h6">Research Background</Typography>
+              <Typography variant="body1">
+                Extensive experience in academic research, including AI/ML
+                systems and political data analysis
               </Typography>
             </div>
           </Grid>

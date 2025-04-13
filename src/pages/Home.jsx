@@ -11,12 +11,20 @@ const Home = () => {
           Hello, I'm <span className="highlight">Jehyeon Lee</span>
         </Typography>
         <Typography variant="h2" className="subtitle">
-          Software Engineer & Full-Stack Developer
+          Data Science & Software Development Enthusiast
         </Typography>
         <Typography variant="body1" className="description">
-          I specialize in building modern web applications with React, Node.js,
-          and cloud technologies. Currently working as a PHP Engineer &
-          Full-Stack Developer at BYU Technology Department.
+          A recent Computer Science graduate from Brigham Young University with
+          a passion for both Data Science and Software Development. I'm
+          fascinated by how technology continues to evolve and am dedicated to
+          contributing to its growth through innovative solutions.
+        </Typography>
+        <Typography variant="body1" className="description" sx={{ mt: 2 }}>
+          With expertise in full-stack development, AI/ML systems, and cloud
+          technologies, I'm actively seeking opportunities to apply my skills in
+          building impactful software solutions. My experience spans from
+          developing web applications to implementing machine learning models
+          and working with extensive datasets.
         </Typography>
         <Box className="cta-buttons">
           <Button

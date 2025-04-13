@@ -65,7 +65,7 @@ const Contact = () => {
         Get in Touch
       </Typography>
 
-      <Grid container spacing={4}>
+      <Grid container spacing={4} justifyContent={"center"}>
         {/* Contact Information Cards */}
         <Grid item xs={12} md={5}>
           <div className="contact-info-section">
@@ -96,7 +96,7 @@ const Contact = () => {
                   </IconButton>
                   <div className="contact-text">
                     <Typography variant="subtitle1">Phone</Typography>
-                    <Typography variant="body1">385-977-9965</Typography>
+                    <Typography variant="body1">334-224-4235</Typography>
                   </div>
                 </div>
 
