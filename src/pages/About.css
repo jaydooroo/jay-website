@@ -119,15 +119,6 @@
   border-left: 4px solid #2196f3;
 }
 
-/* Section Styling */
-section {
-  margin-bottom: 4rem;
-  padding: 2rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
 .section-title {
   display: flex !important;
   align-items: center;

@@ -1,5 +1,4 @@
-:root, .light-theme {
-  /* Light theme variables */
+:root {
   --bg-primary: #ffffff;
   --bg-secondary: #f5f5f5;
   --text-primary: #333333;
@@ -13,19 +12,6 @@
   --hover-text: #2196f3;
 }
 
-.dark-theme {
-  --bg-primary: #121212;
-  --bg-secondary: #1e1e1e;
-  --text-primary: #ffffff;
-  --text-secondary: #e0e0e0;
-  --accent-primary: #90caf9;
-  --accent-secondary: #64b5f6;
-  --border-color: #333333;
-  --card-bg: #1e1e1e;
-  --shadow-color: rgba(0, 0, 0, 0.3);
-  --hover-bg: rgba(144, 202, 249, 0.1);
-  --hover-text: #90caf9;
-}
 
 /* Base styles */
 body {
@@ -118,7 +104,6 @@ a:hover {
   color: var(--accent-secondary);
 }
 
-/* Forms */
 input, textarea {
   background-color: var(--bg-secondary);
   color: var(--text-primary);

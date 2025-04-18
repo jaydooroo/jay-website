@@ -94,19 +94,3 @@
   }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .project-card {
-    background-color: #1e1e1e;
-    color: #ffffff;
-  }
-  
-  .tech-chip {
-    background-color: #333333 !important;
-    color: #ffffff !important;
-  }
-  
-  .tech-chip:hover {
-    background-color: #444444 !important;
-  }
-} 
