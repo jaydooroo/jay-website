@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import JehyeonLeeBug from "../assets/JehyeonLee_bug.jpg";
+import JehyeonLee from "../assets/JehyeonLee.png";
 import {
   Box,
   Container,
@@ -14,7 +14,6 @@ import {
 } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
-import PhoneIcon from "@mui/icons-material/Phone";
 import SchoolIcon from "@mui/icons-material/School";
 import CodeIcon from "@mui/icons-material/Code";
 import DownloadIcon from "@mui/icons-material/Download";
@@ -118,7 +117,7 @@ const About = () => {
           <Grid item xs={12} md={5}>
             <div className="image-container">
               <img
-                src={JehyeonLeeBug}
+                src={JehyeonLee}
                 alt="Jehyeon Lee"
                 className="profile-image"
               />
