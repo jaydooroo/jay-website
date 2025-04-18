@@ -10,6 +10,7 @@ import {
   Button,
   IconButton,
   Snackbar,
+  CircularProgress,
 } from "@mui/material";
 import {
   Email as EmailIcon,
@@ -26,9 +27,12 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: "",
+    severity: "success",
   });
 
   const handleChange = (e) => {
@@ -39,19 +43,49 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically handle the form submission
-    setSnackbar({
-      open: true,
-      message: "Message sent successfully! I will get back to you soon.",
-    });
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+    setLoading(true);
+
+    try {
+      // Replace with your API Gateway endpoint
+      const API_ENDPOINT = "YOUR_API_GATEWAY_ENDPOINT";
+
+      const response = await fetch(API_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setSnackbar({
+        open: true,
+        message: "Message sent successfully! I will get back to you soon.",
+        severity: "success",
+      });
+
+      // Clear form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setSnackbar({
+        open: true,
+        message: "Failed to send message. Please try again later.",
+        severity: "error",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleCloseSnackbar = () => {
@@ -150,6 +184,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   margin="normal"
+                  disabled={loading}
                 />
 
                 <TextField
@@ -161,6 +196,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   margin="normal"
+                  disabled={loading}
                 />
 
                 <TextField
@@ -171,6 +207,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   margin="normal"
+                  disabled={loading}
                 />
 
                 <TextField
@@ -183,6 +220,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   margin="normal"
+                  disabled={loading}
                 />
 
                 <Button
@@ -190,10 +228,17 @@ const Contact = () => {
                   variant="contained"
                   color="primary"
                   size="large"
-                  endIcon={<SendIcon />}
+                  endIcon={
+                    loading ? (
+                      <CircularProgress size={20} color="inherit" />
+                    ) : (
+                      <SendIcon />
+                    )
+                  }
                   className="submit-button"
+                  disabled={loading}
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
