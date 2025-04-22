@@ -49,15 +49,20 @@ const Contact = () => {
 
     try {
       // Replace with your API Gateway endpoint
-      const API_ENDPOINT = "YOUR_API_GATEWAY_ENDPOINT";
-
-      const response = await fetch(API_ENDPOINT, {
+      const API_ENDPOINT =
+        "https://pbhvtrjaqhoi2on53kvegrs42y0ubpcd.lambda-url.us-east-1.on.aws/ ";
+      const sending = {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      });
+      };
+      console.log("Sending data to API:", sending);
+      // Send the form data to the API endpoint
+      const response = await fetch(API_ENDPOINT, sending);
+
+      console.log("API response:", response);
 
       if (!response.ok) {
         throw new Error("Failed to send message");
