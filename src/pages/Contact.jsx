@@ -58,11 +58,8 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       };
-      console.log("Sending data to API:", sending);
       // Send the form data to the API endpoint
       const response = await fetch(API_ENDPOINT, sending);
-
-      console.log("API response:", response);
 
       if (!response.ok) {
         throw new Error("Failed to send message");
